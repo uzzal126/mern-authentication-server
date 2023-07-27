@@ -14,7 +14,10 @@ app.use(express.json())
 app.use(cookieParser())
 
 // middleware
-app.use(cors());
+app.use(cors({
+    origin: ['https://uzzal-mern.netlify.app'],
+    credentials: true
+}));
 
 // database connection
 connectDb()
